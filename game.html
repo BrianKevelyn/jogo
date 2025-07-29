@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma 2D com JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jogo de Plataforma</h1>
+    <p>Use as setas ◄ ► para mover e a Barra de Espaço para pular.</p>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="450"></canvas>
+
+        <div id="mainMenu" class="menu">
+            <h2>Menu Principal</h2>
+            <p id="difficultyDisplay">Dificuldade: 1</p>
+            <button id="startGameBtn">Iniciar Jogo</button>
+            <button id="selectLevelBtn">Selecionar Fase</button>
+            <button id="selectCharacterBtn">Selecionar Personagem</button>
+        </div>
+
+        <div id="levelSelectMenu" class="menu hidden">
+            <h2>Escolha a Fase</h2>
+            <button class="level-select-btn" data-level="1">Fase 1</button>
+            <button class="level-select-btn" data-level="2">Fase 2</button>
+            <button class="level-select-btn" data-level="3">Fase 3</button>
+            <button id="backToMenuFromLevelSelectBtn">Voltar</button>
+        </div>
+
+        <div id="characterSelectMenu" class="menu hidden">
+            <h2>Escolha seu Personagem</h2>
+            <div id="characterList">
+                <img src="characters/arlan.jpg" alt="Arlan" class="character-option" data-char="characters/arlan.jpg">
+                <img src="characters/hiandro.jpg" alt="Hiandro" class="character-option" data-char="characters/hiandro.jpg">
+                <img src="characters/teo.jpeg" alt="Teo" class="character-option" data-char="characters/teo.jpeg">
+                <img src="characters/brian.jpg" alt="Brian" class="character-option" data-char="characters/brian.jpg">
+                <img src="characters/davi.jpg" alt="Davi" class="character-option" data-char="characters/davi.jpg">
+            </div>
+            <button id="backToMenuBtn">Voltar</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
