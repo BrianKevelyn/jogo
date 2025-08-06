@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Jogo de Plataforma</h1>
-    <p>Use as setas ◄ ► para mover e a Barra de Espaço para pular.</p>
+    <p>Setas ◄ ►: Mover | Espaço: Pular | X: Atirar | Q: Trocar Arma</p>
 
     <div id="gameContainer">
         <canvas id="gameCanvas" width="800" height="450"></canvas>
@@ -18,14 +18,26 @@
             <p id="difficultyDisplay">Dificuldade: 1</p>
             <button id="startGameBtn">Iniciar Jogo</button>
             <button id="selectLevelBtn">Selecionar Fase</button>
+            <button id="shopBtn">Loja de Armas</button>
             <button id="selectCharacterBtn">Selecionar Personagem</button>
+        </div>
+
+        <div id="shopMenu" class="menu hidden">
+            <h2>Loja de Armas</h2>
+            <p id="shopPointsDisplay">Seus Pontos: 0</p>
+            <div id="shopItems">
+                <!-- Os itens da loja serão gerados aqui pelo JavaScript -->
+            </div>
+            <button id="backToMenuFromShopBtn">Voltar</button>
         </div>
 
         <div id="levelSelectMenu" class="menu hidden">
             <h2>Escolha a Fase</h2>
-            <button class="level-select-btn" data-level="1">Fase 1</button>
-            <button class="level-select-btn" data-level="2">Fase 2</button>
-            <button class="level-select-btn" data-level="3">Fase 3</button>
+            <div id="levelList">
+                <button class="level-select-btn" data-level="1">Fase 1 <span class="stars" data-level-id="1"></span></button>
+                <button class="level-select-btn" data-level="2">Fase 2 <span class="stars" data-level-id="2"></span></button>
+                <button class="level-select-btn" data-level="3">Fase 3 <span class="stars" data-level-id="3"></span></button>
+            </div>
             <button id="backToMenuFromLevelSelectBtn">Voltar</button>
         </div>
 
